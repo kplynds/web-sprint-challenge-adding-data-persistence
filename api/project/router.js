@@ -4,8 +4,6 @@ const Projects = require('./model');
 
 const router = express.Router();
 
-const db = require("../../data/dbConfig");
-
 router.get('/', (req, res) => {
     const projects = Projects.find().then(data => {
         res.status(200).json(data)
